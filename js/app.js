@@ -99,10 +99,26 @@ function actualizarCantidad(codigoProducto, cantidadActualizada){
 function buscarProductoPorCategoria(categoriaProducto){
     const longitudInventario = inventario.length;
     let productosCategoriaUnica = [];
+
     for(let i=0; i < longitudInventario; i++){
         if(inventario[i].categoria === categoriaProducto){
             productosCategoriaUnica.push(inventario[i]);
         }
     }
+
     return productosCategoriaUnica;
+}
+
+// CALCULAR VALOR TOTAL DEL INVENTARIO
+// Implementa una función 'calcularValorTotal' que calcule y devuelva el valor total del inventario (suma del precio de cada producto multiplicado por su cantidad).
+
+function calcularValorTotal(){
+    const longitudInventario = inventario.length;
+    let valorTotalInventario = 0;
+
+    for(let i = 0; i < longitudInventario; i++){
+        valorTotalInventario += inventario[i].cantidad * inventario[i].precio;
+    }
+
+    return valorTotalInventario
 }
