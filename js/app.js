@@ -52,3 +52,20 @@ function agregarProducto(producto) {
     }
 }
 
+// ELIMINAR PRODUCTOS
+// Implementa una función 'eliminarProducto' que reciba el código de un producto y lo elimine del array 'inventario'.
+
+function eliminarProducto(codigoProducto){
+    const longitudInventario = inventario.length
+    for(let i = 0; i < longitudInventario; i++){
+        if(inventario[i].codigo === codigoProducto){
+            let productoEliminado = inventario.splice(i, 1)
+            console.log(`Se elimino el siguiente producto: ${productoEliminado[0]}`)
+            return;
+        }
+    }
+    console.log(`No se encontro ningun producto con el codigo ${codigoProducto}`)
+}
+
+// ACTUALIZAR CANTIDAD DE PRODUCTOS
+// Implementa una función 'actualizarCantidad' que reciba el código de un producto y una nueva cantidad, y actualice la cantidad del producto correspondiente en el array 'inventario'.
