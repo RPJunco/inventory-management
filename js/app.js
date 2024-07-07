@@ -38,3 +38,17 @@ let inventario = [
         codigo: "P005"
     }
 ];
+
+// AGREGAR PRODUCTOS
+// Implementa una función 'agregarProducto' que reciba un objeto producto (con las propiedades mencionadas) y lo añada al array 'inventario'.
+
+function agregarProducto(producto) {
+    if(producto && producto.nombre && producto.categoria && producto.precio && producto.cantidad && producto.codigo){
+        inventario.push(producto)
+        console.log(`El producto {$producto.nombre} se agrego al inventario`)
+    }
+    else {
+        console.log(`El producto no cumple con las especificaciones, producto omitido..`)
+    }
+}
+
