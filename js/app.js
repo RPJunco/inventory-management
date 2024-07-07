@@ -69,3 +69,15 @@ function eliminarProducto(codigoProducto){
 
 // ACTUALIZAR CANTIDAD DE PRODUCTOS
 // Implementa una función 'actualizarCantidad' que reciba el código de un producto y una nueva cantidad, y actualice la cantidad del producto correspondiente en el array 'inventario'.
+
+function actualizarCantidad(codigoProducto, cantidadActualizada){
+    const longitudInventario = inventario.length
+    for (let i = 0;i < longitudInventario;i++){
+        if(inventario[i].codigo === codigoProducto){
+            inventario[i].cantidad = cantidadActualizada;
+            console.log(`Se actualizo la cantidad del producto de nombre ${inventario[i].nombre}`);
+            return;
+        }
+    }
+    console.log(`No se encontro ningun producto con el codigo ${codigoProducto}`)
+}
