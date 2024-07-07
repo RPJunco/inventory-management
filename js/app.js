@@ -43,10 +43,12 @@ let inventario = [
 // Implementa una función 'agregarProducto' que reciba un objeto producto (con las propiedades mencionadas) y lo añada al array 'inventario'.
 
 function agregarProducto(producto) {
+
     if(producto && producto.nombre && producto.categoria && producto.precio && producto.cantidad && producto.codigo){
         inventario.push(producto)
         console.log(`El producto {$producto.nombre} se agrego al inventario`)
     }
+
     else {
         console.log(`El producto no cumple con las especificaciones, producto omitido..`)
     }
@@ -56,14 +58,19 @@ function agregarProducto(producto) {
 // Implementa una función 'eliminarProducto' que reciba el código de un producto y lo elimine del array 'inventario'.
 
 function eliminarProducto(codigoProducto){
+
     const longitudInventario = inventario.length
+    
     for(let i = 0; i < longitudInventario; i++){
+        
         if(inventario[i].codigo === codigoProducto){
             let productoEliminado = inventario.splice(i, 1)
             console.log(`Se elimino el siguiente producto: ${productoEliminado[0]}`)
             return;
         }
+
     }
+
     console.log(`No se encontro ningun producto con el codigo ${codigoProducto}`)
 }
 
@@ -71,13 +78,31 @@ function eliminarProducto(codigoProducto){
 // Implementa una función 'actualizarCantidad' que reciba el código de un producto y una nueva cantidad, y actualice la cantidad del producto correspondiente en el array 'inventario'.
 
 function actualizarCantidad(codigoProducto, cantidadActualizada){
-    const longitudInventario = inventario.length
+    const longitudInventario = inventario.length;
+
     for (let i = 0;i < longitudInventario;i++){
+        
         if(inventario[i].codigo === codigoProducto){
             inventario[i].cantidad = cantidadActualizada;
             console.log(`Se actualizo la cantidad del producto de nombre ${inventario[i].nombre}`);
             return;
         }
+
     }
-    console.log(`No se encontro ningun producto con el codigo ${codigoProducto}`)
+
+    console.log(`No se encontro ningun producto con el codigo ${codigoProducto}`);
+}
+
+// BUSCAR PRODUCTO POR CATEGORIA
+// Implementa una función 'buscarProductoPorCategoria' que reciba una categoría (string) y devuelva un array con todos los productos de esa categoría.
+
+function buscarProductoPorCategoria(categoriaProducto){
+    const longitudInventario = inventario.length;
+    let productosCategoriaUnica = [];
+    for(let i=0; i < longitudInventario; i++){
+        if(inventario[i].categoria === categoriaProducto){
+            productosCategoriaUnica.push(inventario[i]);
+        }
+    }
+    return productosCategoriaUnica;
 }
