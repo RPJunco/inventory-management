@@ -23,14 +23,14 @@ Para poder ejecutar los scripts y poder visualizar los resultados de cada ejerci
 
 🥇
 La primera es crear un archivo index.html (El archivo index.html es proporcionado en el repositorio). En el mismo archivo agregamos su estructura basica y luego en el body introduccimos la etiqueta ' <script></script> ', en esa etiqueta agregamos un atributo llamado 'src' y dentro de
-esta 'src="ejercicio(n).js" '.
+esta 'src="./js/app.js" '.
 
-![Archivo index.html con su estructura basica](https://github.com/RPJunco/javascript-ejercicios/assets/109442443/f03a7eba-3315-44b7-b3e7-404f7b550f97)
+![Archivo index.html con su estructura basica](https://github.com/user-attachments/assets/efae2c23-f9c5-4ca4-8164-954528d87b83)
 
 Una vez que tenemos la estructura html y el archivo .js enlazado como se muestra en la imagen anterior(Tomamos como ejemplo el ejercicio n°1 pero el procedimiento es aplicable para cualquier ejercicio), podemos abrir el archivo 'index.html' en
 cualquier navegador que deseemos.
 
-![Busqueda del archivo index.html en disco](https://github.com/RPJunco/ejercicios-javascript/assets/109442443/b6348e84-917f-4483-b444-6afa0f4bdd64)
+![Busqueda del archivo index.html en disco](https://github.com/user-attachments/assets/9f26c969-d1d5-4137-a26a-adc984989fd9)
 
 Cuando abrimos el archivo en el navegador buscaremos en una opcion que sera util para ejecutar y visualizar los scripts, llamada herramientas del desarrollador.
 
@@ -44,7 +44,8 @@ Una vez se despliegue la herramienta en el navegador se buscara la opcion llamad
 
 En la consola se utilizara la funcion necesaria para visualizar los valores que el script calcula de forma interna.
 
-![Ingresar funcion y obtener valores](https://github.com/RPJunco/javascript-ejercicios/assets/109442443/a88d39b6-e9f5-4eb4-9280-7616eb1f5932)
+
+![Ingresar funcion y obtener valores](https://github.com/user-attachments/assets/b35c306e-4422-4f35-a78b-be405e119d24)
 
 
 🥈
