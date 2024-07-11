@@ -46,7 +46,7 @@ function agregarProducto(producto) {
 
     if(producto && producto.nombre && producto.categoria && producto.precio && producto.cantidad && producto.codigo){
         inventario.push(producto)
-        console.log(`El producto {$producto.nombre} se agrego al inventario`)
+        console.log(`El producto ${producto.nombre} se agrego al inventario`)
     }
 
     else {
@@ -65,12 +65,11 @@ function eliminarProducto(codigoProducto){
         
         if(inventario[i].codigo === codigoProducto){
             let productoEliminado = inventario.splice(i, 1)
-            console.log(`Se elimino el siguiente producto: ${productoEliminado[0]}`)
+            console.log(`Se elimino el un producto con el codigo: ${codigoProducto}`)
             return;
         }
 
     }
-
     console.log(`No se encontro ningun producto con el codigo ${codigoProducto}`)
 }
 
@@ -84,7 +83,7 @@ function actualizarCantidad(codigoProducto, cantidadActualizada){
         
         if(inventario[i].codigo === codigoProducto){
             inventario[i].cantidad = cantidadActualizada;
-            console.log(`Se actualizo la cantidad del producto de nombre ${inventario[i].nombre}`);
+            console.log(`Se actualizo la cantidad del producto de nombre: ${inventario[i].nombre}, a una cantidad de: ${cantidadActualizada}`);
             return;
         }
 
