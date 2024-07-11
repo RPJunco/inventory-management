@@ -122,3 +122,50 @@ function calcularValorTotal(){
 
     return valorTotalInventario
 }
+
+// Testeo
+
+
+// Prueba del primer punto -- Agregar producto
+
+let productoPruebaUno = {
+    nombre: "Teclado Mecanico HyperXV2",
+    categoria: "Accesorios",
+    precio: 210,
+    cantidad: 28,
+    codigo: "RJ001"
+};
+agregarProducto(productoPruebaUno);
+
+// Visualizacion - producto agregado
+console.log(inventario[inventario.length - 1])
+
+/*---------------------------------------------*/
+
+// Prueba del segundo punto -- Eliminar producto
+eliminarProducto("RJ001")
+
+// Visualizacion - producto eliminado
+console.log(inventario.some(item => item.codigo === 'RJ001'))
+
+/*---------------------------------------------*/
+
+// Prueba del tercer punto -- Actualizar cantidad de productos
+actualizarCantidad('P004', 23)
+
+// Visualizacion - cantidad de productos actualizados
+console.log(inventario.some(item => item.nombre === 'Monitor' && item.cantidad === 23))
+
+/*---------------------------------------------*/
+
+// Prueba del cuarto punto -- Buscar producto por categoria
+let arrayProductosPorCategoria = buscarProductoPorCategoria('Muebles')
+
+// Visualizacion - arreglo de productos por categoria
+console.log(arrayProductosPorCategoria)
+
+/*---------------------------------------------*/
+
+// Prueba del quinto punto -- Calcular valor total del inventario
+// Visualizacion - monto total del inventario
+console.log(`El valor total del inventario es: ${calcularValorTotal()}`)
